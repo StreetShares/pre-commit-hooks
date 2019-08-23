@@ -1,11 +1,11 @@
-- id: kubeval
-  name: kubeval
-  description: Run kubeval, a linter for k8s manifest files
-  entry: hooks/kubeval.bash
-  language: script
-- id: helmlint
-  name: helmlint
-  description: Run helm lint, a linter for helm charts
-  entry: hooks/helmlint.bash
-  language: script
-  files: \.((ya?ml)|(tpl))$
+-   id: kubeval
+    name: kubeval
+    description: Run kubeval, a linter for k8s manifest files
+    entry: hooks/kubeval.bash
+    language: script
+-   id: dynamic-pylint
+    name: dynamic pylint
+    description: Run pylint lint, a linter for python
+    entry: hooks/dynamic_pylint.py
+    language: script
+    types: [python]
