@@ -61,8 +61,8 @@ def main(argv=None):
     python_major_version = _get_python_major_version(service_config_file)
     args = parser.parse_args(argv)
 
-    python3_pylint = 'python3 -mpylint {}'.format(' '.join(args.filenames))
-    python_pylint = 'python -mpylint {}'.format(' '.join(args.filenames))
+    python3_pylint = '/usr/local/bin/python3 -mpylint {}'.format(' '.join(args.filenames))
+    python_pylint = '/usr/bin/python -mpylint {}'.format(' '.join(args.filenames))
 
     if python_major_version == '3':
         return_code = _run_cmd(python3_pylint)
