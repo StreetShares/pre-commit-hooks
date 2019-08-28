@@ -17,7 +17,6 @@ import argparse
 import re
 import subprocess
 import os
-import sys
 
 def _get_python_major_version(service_config_file):
     regex = re.compile(r"^PYTHON_VERSION\s*=\s*([^.]).*$")
@@ -79,7 +78,7 @@ def main(argv=None):
     else:
         print('PYTHON_VERSION not set in {}.  Skipping...'.format(
             service_config_file
-        ), file=sys.stderr)
+        ))
         # For now we are going to skip. PYTHON_VERSION  needs to be set
         # everywhere, but that will not happen immediatly.  Switch this over
         # after some time out in the wild.
@@ -91,7 +90,7 @@ def main(argv=None):
         for file in args.filenames:
             python_files += file + ' '
     else:
-        python_files = args.filenames
+        python_files = args.filenames[0]
 
     _, image_available = _run_cmd('docker images --format "{{.Repository}}:{{.Tag}}"')
     if image_name not in image_available:
