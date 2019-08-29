@@ -91,7 +91,7 @@ def main(argv=None):
         for file in args.filenames:
             python_files += file + ' '
     else:
-        python_files = args.filenames
+        python_files = args.filenames[0]
 
     _, image_available = _run_cmd('docker images --format "{{.Repository}}:{{.Tag}}"')
     if image_name not in image_available:
