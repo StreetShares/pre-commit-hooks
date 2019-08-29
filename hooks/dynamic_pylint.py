@@ -79,6 +79,7 @@ def main(argv=None):
         print('PYTHON_VERSION not set in {}.  Skipping...'.format(
             service_config_file
         ))
+
         # For now we are going to skip. PYTHON_VERSION  needs to be set
         # everywhere, but that will not happen immediatly.  Switch this over
         # after some time out in the wild.
