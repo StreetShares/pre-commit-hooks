@@ -9,3 +9,9 @@
     entry: hooks/dynamic_pylint.py
     language: script
     types: [python]
+-   id: pre-commit-openapi
+    name: OpenAPI Linter
+    description: This hook will lint your OpenAPI specifications.
+    entry: hooks/run_speccy.sh
+    language: script
+    files: (schema|swagger).(yaml|yml)$
