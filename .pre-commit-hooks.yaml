@@ -14,4 +14,4 @@
     description: This hook will lint your OpenAPI specifications.
     entry: hooks/run_speccy.sh
     language: script
-    files: (schema|swagger).(yaml|yml)$
+    files: swagger/schema.(yml|yaml)
